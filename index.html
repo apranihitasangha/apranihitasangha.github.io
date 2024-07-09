@@ -8,15 +8,17 @@
     <!-- Google Fonts: Montserrat for headings and Open Sans for body text -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Peaceful Minds</h1>
+            <h1><span>Peaceful Minds</span></h1>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#blog">Blog</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -25,71 +27,85 @@
         </div>
     </header>
 
-    <section id="home">
+    <section id="home" class="home-section">
         <div class="container">
-            <h2>Welcome to Peaceful Minds</h2>
-            <p>Discover inner peace and mindfulness through meditation.</p>
-            <a href="#about" class="btn">Learn More</a>
+            <div class="hero-content">
+                <h2>Welcome to <span>Peaceful Minds</span></h2>
+                <p>Find inner peace and harmony through the power of meditation.</p>
+                <a href="#about" class="btn">Learn More</a>
+            </div>
         </div>
     </section>
 
-    <section id="about">
+    <section id="about" class="about-section">
         <div class="container">
-            <h2>About Peaceful Minds</h2>
-            <p>We are dedicated to guiding individuals towards a more mindful and peaceful life through meditation practices.</p>
-            <p>Our team of experienced meditation instructors is committed to helping you achieve mental clarity and emotional balance.</p>
+            <div class="about-content">
+                <h2>About Peaceful Minds</h2>
+                <p>We are dedicated to guiding individuals towards a more mindful and peaceful life through meditation practices.</p>
+                <p>Our team of experienced meditation instructors is committed to helping you achieve mental clarity and emotional balance.</p>
+            </div>
         </div>
     </section>
 
-    <section id="services">
+    <section id="services" class="services-section">
         <div class="container">
             <h2>Our Services</h2>
-            <div class="service">
-                <h3>Guided Meditation Sessions</h3>
-                <p>Personalized sessions tailored to your needs, guided by experienced instructors.</p>
-            </div>
-            <div class="service">
-                <h3>Meditation Workshops</h3>
-                <p>Engaging workshops designed to deepen your understanding and practice of meditation techniques.</p>
-            </div>
-            <div class="service">
-                <h3>Meditation Retreats</h3>
-                <p>Immerse yourself in serene retreats to rejuvenate your mind, body, and spirit.</p>
+            <div class="services-grid">
+                <div class="service">
+                    <i class="fas fa-spa"></i>
+                    <h3>Guided Meditation Sessions</h3>
+                    <p>Personalized sessions tailored to your needs, guided by experienced instructors.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-users"></i>
+                    <h3>Meditation Workshops</h3>
+                    <p>Engaging workshops designed to deepen your understanding and practice of meditation techniques.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-tree"></i>
+                    <h3>Meditation Retreats</h3>
+                    <p>Immerse yourself in serene retreats to rejuvenate your mind, body, and spirit.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="blog">
+    <section id="blog" class="blog-section">
         <div class="container">
             <h2>Latest Articles</h2>
-            <div class="blog-post">
-                <h3>Benefits of Daily Meditation</h3>
-                <p>Discover how daily meditation can positively impact your life.</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-            <div class="blog-post">
-                <h3>Top 5 Meditation Techniques</h3>
-                <p>Explore effective meditation techniques to enhance your practice.</p>
-                <a href="#" class="btn">Read More</a>
+            <div class="blog-posts">
+                <div class="blog-post">
+                    <h3>Benefits of Daily Meditation</h3>
+                    <p>Discover how daily meditation can positively impact your life.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+                <div class="blog-post">
+                    <h3>Top 5 Meditation Techniques</h3>
+                    <p>Explore effective meditation techniques to enhance your practice.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact">
+    <footer id="contact" class="contact-section">
         <div class="container">
             <h3>Contact Us</h3>
             <form action="submit.php" method="POST">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
+                <button type="submit" class="btn">Send Message</button>
             </form>
             <ul class="social">
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Instagram</a></li>
+                <li><a href="#" class="fab fa-facebook-f"></a></li>
+                <li><a href="#" class="fab fa-twitter"></a></li>
+                <li><a href="#" class="fab fa-instagram"></a></li>
             </ul>
         </div>
     </footer>
+
+    <!-- Font Awesome script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </body>
 </html>
