@@ -1,5 +1,13 @@
+/* Reset default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px; /* Base font size */
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
@@ -7,20 +15,21 @@ body {
     line-height: 1.6;
 }
 
-/* Update the font size for section content */
+/* Update font size and styles for section content */
 .section-content {
     margin-bottom: 40px;
 }
 
 .section-content h2 {
-    font-size: 2.5rem; /* Increase heading size for emphasis */
+    font-size: 2rem; /* Adjust heading size */
     margin-bottom: 20px;
 }
 
 .section-content p {
-    font-size: 1.4rem; /* Larger font size for paragraphs */
+    font-size: 1rem; /* Smaller font size for paragraphs */
     max-width: 800px;
     margin: 0 auto 20px;
+    line-height: 1.6;
 }
 
 .section-content ul {
