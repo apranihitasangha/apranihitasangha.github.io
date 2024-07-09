@@ -125,6 +125,9 @@ header nav ul li a:hover {
 
 .tabs {
     width: 30%;
+    background-color: #ddd;
+    border-radius: 10px;
+    padding: 20px;
 }
 
 .tabs ul {
@@ -139,7 +142,7 @@ header nav ul li a:hover {
 .tabs ul li a {
     display: block;
     padding: 10px;
-    background-color: #ddd;
+    background-color: #ccc;
     color: #333;
     text-decoration: none;
     border-radius: 5px;
@@ -147,7 +150,7 @@ header nav ul li a:hover {
 }
 
 .tabs ul li a:hover {
-    background-color: #ccc;
+    background-color: #bbb;
 }
 
 .content {
@@ -162,8 +165,4 @@ header nav ul li a:hover {
     display: block;
 }
 
-.services-section h2 {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-weight: 700;
-    font-size: 2.5rem;
-   
+.services-section
