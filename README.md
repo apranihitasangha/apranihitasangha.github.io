@@ -1,4 +1,4 @@
-## Apranihit Sangh
+## Apranihita Sangha
 The aimless, the pathless... The word apranihita is a sanskrit word for aimlessness. In buddhism or advait vedantic text like Ashtavakra Samhita aimlessness has been prescribed as the penultimate sadhana. The Buddha describes three doors to liberation: Non-self, signlessness (no form) and aimlessness (no goal/desire). The all three doors points to one reality, reality of dependent origination. According to the Buddha the one who sees the dependent origination as a fact of existence is already free. The idea of dependent origination has been extensively studies and used by monks and laymen through out ancient India and other parts of the Asia
 to ''attain'' liberation. Nagarjuna the famous teacher of the old Nalanda University provides a regourous treatment of dependent origination in his most well known work called _Mūlamadhyama Kakārikā_. In modern times, teachings of sages like Jiddu Krishnamurthi has emphasised the aimlessness as an important tool to learn about our own "self". His famous quoute _Truth is a pathless land_ recapitulates the idea of aimlessness being a door to liberation. 
 
