@@ -3,115 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aimless Meditation - Peaceful Minds</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Google Fonts: Montserrat for headings and Open Sans for body text -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>[Your Meditation Center Name]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        .hero {
+            background-image: url('hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+        .hero button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .content {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1><span>Aimless Meditation</span></h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <div class="logo">[Your Logo]</div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Services</a>
+                <a href="#">Schedule</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
     </header>
-
-    <section id="home" class="home-section">
-        <div class="container">
-            <div class="content">
-                <h2>Discover <span>Aimless Meditation</span></h2>
-                <p>Find peace in letting go of goals and simply being present in the moment.</p>
-                <a href="#about" class="btn">Learn More</a>
-            </div>
-        </div>
+    <section class="hero">
+        <h1>Welcome to [Your Meditation Center Name]</h1>
+        <p>Find Your Inner Peace</p>
+        <button>Join Us</button>
     </section>
-
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="content">
-                <h2>About Aimless Meditation</h2>
-                <p>Aimless meditation, inspired by Zen practice, encourages a state of non-doing or wu wei. It is about being fully present without striving for any specific outcome, embracing the moment as it is.</p>
-            </div>
-        </div>
+    <section class="content">
+        <h2>About Us</h2>
+        <p>At [Your Meditation Center Name], we believe in the power of meditation to transform lives. Our mission is to provide a peaceful space where individuals can find balance, tranquility, and inner peace.</p>
     </section>
-
-    <section id="services" class="services-section">
-        <div class="container">
-            <div class="tabs">
-                <ul>
-                    <li><a href="#guided-meditation">Guided Meditation</a></li>
-                    <li><a href="#workshops">Meditation Workshops</a></li>
-                    <li><a href="#retreats">Meditation Retreats</a></li>
-                </ul>
-            </div>
-            <div class="content">
-                <div id="guided-meditation" class="tab-content">
-                    <h2>Guided Aimless Meditation</h2>
-                    <p>Experience guided sessions that help you embrace aimlessness in your meditation practice.</p>
-                </div>
-                <div id="workshops" class="tab-content">
-                    <h2>Aimless Meditation Workshops</h2>
-                    <p>Join workshops designed to deepen your understanding and practice of aimless meditation.</p>
-                </div>
-                <div id="retreats" class="tab-content">
-                    <h2>Aimless Meditation Retreats</h2>
-                    <p>Immerse yourself in retreats that nurture aimlessness and inner peace.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="blog" class="blog-section">
-        <div class="container">
-            <div class="content">
-                <h2>Explore Aimless Living</h2>
-                <div class="blog-posts">
-                    <div class="blog-post">
-                        <h3>Benefits of Aimless Meditation</h3>
-                        <p>Discover how aimless meditation can bring clarity and tranquility to your life.</p>
-                        <a href="#" class="btn">Read More</a>
-                    </div>
-                    <div class="blog-post">
-                        <h3>Practicing Wu Wei in Daily Life</h3>
-                        <p>Learn how to integrate the concept of non-doing into your daily activities.</p>
-                        <a href="#" class="btn">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contact" class="contact-section">
-        <div class="container">
-            <div class="content">
-                <h3>Contact Us</h3>
-                <form action="submit.php" method="POST">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
-                <ul class="social">
-                    <li><a href="#" class="fab fa-facebook-f"></a></li>
-                    <li><a href="#" class="fab fa-twitter"></a></li>
-                    <li><a href="#" class="fab fa-instagram"></a></li>
-                </ul>
-            </div>
-        </div>
+    <footer>
+        <p>&copy; 2024 [Your Meditation Center Name]. All rights reserved.</p>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
     </footer>
-
-    <!-- Font Awesome script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </body>
 </html>
