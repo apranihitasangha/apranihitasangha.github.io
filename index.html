@@ -29,7 +29,7 @@
 
     <section id="home" class="home-section">
         <div class="container">
-            <div class="hero-content">
+            <div class="content">
                 <h2>Discover <span>Aimless Meditation</span></h2>
                 <p>Find peace in letting go of goals and simply being present in the moment.</p>
                 <a href="#about" class="btn">Learn More</a>
@@ -39,31 +39,33 @@
 
     <section id="about" class="about-section">
         <div class="container">
-            <div class="about-content">
-                <h2>Understanding Aimless Meditation</h2>
-                <p>Aimless meditation, inspired by Zen practice, encourages a state of non-doing or wu wei.</p>
-                <p>It is about being fully present without striving for any specific outcome, embracing the moment as it is.</p>
+            <div class="content">
+                <h2>About Aimless Meditation</h2>
+                <p>Aimless meditation, inspired by Zen practice, encourages a state of non-doing or wu wei. It is about being fully present without striving for any specific outcome, embracing the moment as it is.</p>
             </div>
         </div>
     </section>
 
     <section id="services" class="services-section">
         <div class="container">
-            <h2>Our Aimless Services</h2>
-            <div class="services-grid">
-                <div class="service">
-                    <img src="img/guided-meditation.jpg" alt="Guided Meditation" class="service-img">
-                    <h3>Guided Aimless Meditation</h3>
+            <div class="tabs">
+                <ul>
+                    <li><a href="#guided-meditation">Guided Meditation</a></li>
+                    <li><a href="#workshops">Meditation Workshops</a></li>
+                    <li><a href="#retreats">Meditation Retreats</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <div id="guided-meditation" class="tab-content">
+                    <h2>Guided Aimless Meditation</h2>
                     <p>Experience guided sessions that help you embrace aimlessness in your meditation practice.</p>
                 </div>
-                <div class="service">
-                    <img src="img/meditation-workshop.jpg" alt="Meditation Workshop" class="service-img">
-                    <h3>Aimless Meditation Workshops</h3>
+                <div id="workshops" class="tab-content">
+                    <h2>Aimless Meditation Workshops</h2>
                     <p>Join workshops designed to deepen your understanding and practice of aimless meditation.</p>
                 </div>
-                <div class="service">
-                    <img src="img/meditation-retreat.jpg" alt="Meditation Retreat" class="service-img">
-                    <h3>Aimless Meditation Retreats</h3>
+                <div id="retreats" class="tab-content">
+                    <h2>Aimless Meditation Retreats</h2>
                     <p>Immerse yourself in retreats that nurture aimlessness and inner peace.</p>
                 </div>
             </div>
@@ -72,17 +74,19 @@
 
     <section id="blog" class="blog-section">
         <div class="container">
-            <h2>Explore Aimless Living</h2>
-            <div class="blog-posts">
-                <div class="blog-post">
-                    <h3>Benefits of Aimless Meditation</h3>
-                    <p>Discover how aimless meditation can bring clarity and tranquility to your life.</p>
-                    <a href="#" class="btn">Read More</a>
-                </div>
-                <div class="blog-post">
-                    <h3>Practicing Wu Wei in Daily Life</h3>
-                    <p>Learn how to integrate the concept of non-doing into your daily activities.</p>
-                    <a href="#" class="btn">Read More</a>
+            <div class="content">
+                <h2>Explore Aimless Living</h2>
+                <div class="blog-posts">
+                    <div class="blog-post">
+                        <h3>Benefits of Aimless Meditation</h3>
+                        <p>Discover how aimless meditation can bring clarity and tranquility to your life.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                    <div class="blog-post">
+                        <h3>Practicing Wu Wei in Daily Life</h3>
+                        <p>Learn how to integrate the concept of non-doing into your daily activities.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -90,18 +94,20 @@
 
     <footer id="contact" class="contact-section">
         <div class="container">
-            <h3>Contact Us</h3>
-            <form action="submit.php" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-            <ul class="social">
-                <li><a href="#" class="fab fa-facebook-f"></a></li>
-                <li><a href="#" class="fab fa-twitter"></a></li>
-                <li><a href="#" class="fab fa-instagram"></a></li>
-            </ul>
+            <div class="content">
+                <h3>Contact Us</h3>
+                <form action="submit.php" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+                <ul class="social">
+                    <li><a href="#" class="fab fa-facebook-f"></a></li>
+                    <li><a href="#" class="fab fa-twitter"></a></li>
+                    <li><a href="#" class="fab fa-instagram"></a></li>
+                </ul>
+            </div>
         </div>
     </footer>
 
