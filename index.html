@@ -1,9 +1,8 @@
-<!-- HTML structure with updated JavaScript -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Apranhit Sangh</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -41,41 +40,6 @@
     <p>&copy; 2025 Apranhit Sangh</p>
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const links = document.querySelectorAll(".navbar a");
-      const sections = document.querySelectorAll(".section-content");
-
-      links.forEach(link => {
-        link.addEventListener("click", function (e) {
-          e.preventDefault();
-
-          // Remove 'active' class from all links
-          links.forEach(l => l.classList.remove("active"));
-          this.classList.add("active");
-
-          // Get the target section ID
-          const targetId = this.getAttribute("href").substring(1);
-          const targetSection = document.getElementById(targetId);
-
-          // Hide all sections with fade-out
-          sections.forEach(section => {
-            section.classList.remove("active");
-            section.style.opacity = 0;
-            setTimeout(() => section.style.display = "none", 300);
-          });
-
-          // Show target section with fade-in
-          setTimeout(() => {
-            targetSection.style.display = "block";
-            setTimeout(() => {
-              targetSection.classList.add("active");
-              targetSection.style.opacity = 1;
-            }, 10);
-          }, 300);
-        });
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
