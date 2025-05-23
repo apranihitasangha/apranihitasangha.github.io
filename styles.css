@@ -59,7 +59,6 @@ a:hover {
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   color: #222;
 
-  /* Fix consistent height for all sections */
   height: 650px; /* fixed height */
   display: flex;
   flex-direction: column;
@@ -71,6 +70,44 @@ a:hover {
 /* Sections */
 .section-content {
   display: none;
-  animation: fadeIn 0.5s ease-in-out;
   margin: 0;
-  padd
+  padding: 0;
+  flex-grow: 1;
+  height: 100%;
+  overflow-y: auto; /* scroll if content overflows */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.section-content.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: #f4a261; /* saffron */
+  color: white;
+  border-radius: 6px 6px 0 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* Footer */
+footer {
+  flex-shrink: 0;
+  text-align: center;
+  padding: 1rem 0;
+  background: #2c3e50;
+  color: #ecf0f1;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+footer a {
+  margin: 0 0.5rem;
+  color: #ecf0f1;
+}
