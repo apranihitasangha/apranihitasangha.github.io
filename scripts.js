@@ -1,26 +1,30 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const navLinks = document.querySelectorAll(".nav-link");
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll(".navbar a");
   const sections = document.querySelectorAll(".section-content");
 
-  navLinks.forEach(link => {
-    link.addEventListener("click", (e) => {
+  links.forEach(link => {
+    link.addEventListener("click", function (e) {
       e.preventDefault();
 
-      // Remove active classes
-      navLinks.forEach(l => l.classList.remove("active"));
-      sections.forEach(s => s.classList.remove("active"));
+      // Remove 'active' class from all links
+      links.forEach(l => l.classList.remove("active"));
+      this.classList.add("active");
 
-      // Add active to clicked nav link
-      link.classList.add("active");
+      // Get the target section ID
+      const targetId = this.getAttribute("href").substring(1);
+      const targetSection = document.getElementById(targetId);
 
-      // Show corresponding section
-      const sectionId = link.getAttribute("data-section");
-      const targetSection = document.getElementById(sectionId);
-      if (targetSection) {
+      // Hide all sections with fade-out effect
+      sections.forEach(section => {
+        if(section !== targetSection) {
+          section.classList.remove("active");
+        }
+      });
+
+      // Delay to trigger fade transition for showing the target section
+      setTimeout(() => {
         targetSection.classList.add("active");
-        // Scroll to top smoothly (optional)
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
+      }, 50);
     });
   });
 });
