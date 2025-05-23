@@ -1,0 +1,81 @@
+<!-- HTML structure with updated JavaScript -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apranhit Sangh</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#activities">Activities</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main class="content">
+    <section id="home" class="section-content active">
+      <div class="hero">Welcome to Apranhit Sangh</div>
+      <p>This is the home section.</p>
+    </section>
+
+    <section id="about" class="section-content">
+      <div class="hero">About Us</div>
+      <p>This is the about section.</p>
+    </section>
+
+    <section id="activities" class="section-content">
+      <div class="hero">Our Activities</div>
+      <p>This is the activities section.</p>
+    </section>
+
+    <section id="contact" class="section-content">
+      <div class="hero">Contact Us</div>
+      <p>This is the contact section.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Apranhit Sangh</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll(".navbar a");
+      const sections = document.querySelectorAll(".section-content");
+
+      links.forEach(link => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          // Remove 'active' class from all links
+          links.forEach(l => l.classList.remove("active"));
+          this.classList.add("active");
+
+          // Get the target section ID
+          const targetId = this.getAttribute("href").substring(1);
+          const targetSection = document.getElementById(targetId);
+
+          // Hide all sections with fade-out
+          sections.forEach(section => {
+            section.classList.remove("active");
+            section.style.opacity = 0;
+            setTimeout(() => section.style.display = "none", 300);
+          });
+
+          // Show target section with fade-in
+          setTimeout(() => {
+            targetSection.style.display = "block";
+            setTimeout(() => {
+              targetSection.classList.add("active");
+              targetSection.style.opacity = 1;
+            }, 10);
+          }, 300);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
