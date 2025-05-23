@@ -7,13 +7,12 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   line-height: 1.6;
-  background: #f4a261; /* saffron background everywhere */
+  background: #f9f9f9; /* light background */
   color: #333;
 
-  /* Flex container for sticky footer */
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* full viewport height */
+  min-height: 100vh;
 }
 
 /* Links */
@@ -43,46 +42,56 @@ a:hover {
   transition: background 0.3s;
 }
 
-/* Changed active and hover background to saffron */
 .navbar a:hover,
 .navbar a.active {
   background: #f4a261; /* saffron */
   color: white;
 }
 
-/* Main content */
+/* Main content container */
 .content {
-  flex: 1 0 auto; /* grow and fill available space */
+  flex: 1 0 auto;
   max-width: 900px;
   margin: 2rem auto;
-  padding: 2rem 2rem 3rem; /* uniform padding */
-  background: #f4a261; /* saffron to blend with body */
+  padding: 2rem 2rem 3rem;
+  background: #f4a261; /* saffron */
   border-radius: 6px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  color: #222; /* darker text for readability */
+  color: #222;
+
+  /* Fix consistent height for all sections */
+  min-height: 600px; /* adjust based on your tallest section */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   font-size: 1rem;
   line-height: 1.6;
 }
 
-/* Sections hidden by default */
+/* Sections */
 .section-content {
   display: none;
   animation: fadeIn 0.5s ease-in-out;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  overflow: auto; /* scroll if content overflows */
 }
 
 .section-content.active {
   display: block;
 }
 
-/* Hero section */
+/* Hero */
 .hero {
   text-align: center;
   padding: 2rem 1rem;
-  background: #2a2a2a; /* dark contrast for hero */
+  background: #2a2a2a;
   color: white;
   border-radius: 6px 6px 0 0;
   font-size: 1.5rem;
   font-weight: 600;
+  margin-bottom: 2rem;
 }
 
 /* Tables */
@@ -99,7 +108,6 @@ th, td {
   text-align: left;
 }
 
-/* Changed table header background to darker saffron */
 th {
   background: #e07a34; /* darker saffron */
   color: white;
@@ -121,9 +129,9 @@ iframe {
   margin-bottom: 2rem;
 }
 
-/* Footer stays at bottom */
+/* Footer */
 footer {
-  flex-shrink: 0; /* prevent shrinking */
+  flex-shrink: 0;
   text-align: center;
   padding: 1rem 0;
   background: #2c3e50;
@@ -137,7 +145,6 @@ footer a {
   color: #ecf0f1;
 }
 
-/* Fade-in animation */
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
