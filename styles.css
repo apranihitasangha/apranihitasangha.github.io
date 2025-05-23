@@ -7,7 +7,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   line-height: 1.6;
-  background: #f9f9f9; /* light background */
+  background: #f9f9f9;
   color: #333;
 
   display: flex;
@@ -54,13 +54,12 @@ a:hover {
   max-width: 900px;
   margin: 2rem auto;
   padding: 2rem 2rem 3rem;
-  background: #f4a261; /* saffron */
+  background: white; /* changed from saffron to white */
   border-radius: 6px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   color: #222;
 
-  /* Fix consistent height for all sections */
-  min-height: 600px; /* adjust based on your tallest section */
+  min-height: 600px; /* consistent height */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -75,7 +74,7 @@ a:hover {
   margin: 0;
   padding: 0;
   flex-grow: 1;
-  overflow: auto; /* scroll if content overflows */
+  overflow: auto;
 }
 
 .section-content.active {
@@ -109,7 +108,7 @@ th, td {
 }
 
 th {
-  background: #e07a34; /* darker saffron */
+  background: #e07a34;
   color: white;
 }
 
@@ -145,6 +144,7 @@ footer a {
   color: #ecf0f1;
 }
 
+/* Animations */
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
