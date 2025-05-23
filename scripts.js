@@ -1,26 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const links = document.querySelectorAll(".navbar a");
+  const navLinks = document.querySelectorAll(".nav-link");
   const sections = document.querySelectorAll(".section-content");
 
-  links.forEach(link => {
-    link.addEventListener("click", e => {
+  navLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
       e.preventDefault();
 
-      // Remove active class from all nav links
-      links.forEach(l => l.classList.remove("active"));
+      // Remove active classes
+      navLinks.forEach(l => l.classList.remove("active"));
+      sections.forEach(s => s.classList.remove("active"));
+
+      // Add active to clicked nav link
       link.classList.add("active");
 
-      // Get target section id
-      const targetId = link.getAttribute("href").substring(1);
-
-      // Fade out all sections except target
-      sections.forEach(section => {
-        if (section.id === targetId) {
-          section.classList.add("active");
-        } else {
-          section.classList.remove("active");
-        }
-      });
+      // Show corresponding section
+      const sectionId = link.getAttribute("data-section");
+      const targetSection = document.getElementById(sectionId);
+      if (targetSection) {
+        targetSection.classList.add("active");
+        // Scroll to top smoothly (optional)
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
     });
   });
 });
