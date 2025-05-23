@@ -9,8 +9,14 @@ body {
   line-height: 1.6;
   background: #f9f9f9;
   color: #333;
+
+  /* Flex container for sticky footer */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
 }
 
+/* Links */
 a {
   color: #0077cc;
   text-decoration: none;
@@ -37,14 +43,16 @@ a:hover {
   transition: background 0.3s;
 }
 
+/* Changed active and hover background to saffron */
 .navbar a:hover,
 .navbar a.active {
-  background: #3498db;
+  background: #f4a261; /* saffron */
   color: white;
 }
 
 /* Main content */
 .content {
+  flex: 1 0 auto; /* grow and fill available space */
   max-width: 900px;
   margin: 2rem auto;
   padding: 0 1rem;
@@ -63,7 +71,7 @@ a:hover {
   display: block;
 }
 
-/* Hero */
+/* Hero section */
 .hero {
   text-align: center;
   padding: 2rem 1rem;
@@ -85,8 +93,9 @@ th, td {
   text-align: left;
 }
 
+/* Changed table header background to saffron */
 th {
-  background: #3498db;
+  background: #f4a261; /* saffron */
   color: white;
 }
 
@@ -106,28 +115,9 @@ iframe {
   margin-bottom: 2rem;
 }
 
-/* Make the whole page a flex container in column direction */
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* full viewport height */
-  margin: 0; /* reset margin */
-}
-
-/* Make main content expand to fill available space */
-main.content {
-  flex: 1 0 auto; /* grow, don’t shrink, auto basis */
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  background: white;
-  border-radius: 6px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
 /* Footer stays at bottom */
 footer {
-  flex-shrink: 0; /* don’t shrink */
+  flex-shrink: 0; /* prevent shrinking */
   text-align: center;
   padding: 1rem 0;
   background: #2c3e50;
@@ -136,21 +126,12 @@ footer {
   width: 100%;
 }
 
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem 0;
-  background: #2c3e50;
-  color: #ecf0f1;
-  margin-top: 2rem;
-}
-
 footer a {
   margin: 0 0.5rem;
   color: #ecf0f1;
 }
 
+/* Fade-in animation */
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
