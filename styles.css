@@ -7,8 +7,9 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   line-height: 1.6;
-  background: #f9f9f9;
+  background: #f9f9f9; /* light background */
   color: #333;
+
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -51,16 +52,18 @@ a:hover {
 .content {
   flex: 1 0 auto;
   max-width: 900px;
-  height: 650px; /* fixed height for all sections */
   margin: 2rem auto;
-  padding: 2rem 2rem 3rem;
+  padding: 2rem;
   background: white;
   border-radius: 6px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   color: #222;
+
+  /* Fix consistent height for all sections */
+  height: 650px; /* fixed height */
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  justify-content: flex-start;
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -68,80 +71,6 @@ a:hover {
 /* Sections */
 .section-content {
   display: none;
-  flex: 1 1 auto;
-  overflow-y: auto;
   animation: fadeIn 0.5s ease-in-out;
-}
-
-.section-content.active {
-  display: block;
-}
-
-/* Hero */
-.hero {
-  text-align: center;
-  padding: 2rem 1rem;
-  background: #f4a261; /* light saffron */
-  color: white;
-  border-radius: 6px 6px 0 0;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 2rem;
-}
-
-/* Tables */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
-  font-size: 1rem;
-}
-
-th, td {
-  padding: 0.75rem;
-  border: 1px solid #ddd;
-  text-align: left;
-}
-
-th {
-  background: #e07a34; /* darker saffron */
-  color: white;
-}
-
-/* Images */
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  margin-bottom: 1rem;
-}
-
-/* Iframe */
-iframe {
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  margin-bottom: 2rem;
-}
-
-/* Footer */
-footer {
-  flex-shrink: 0;
-  text-align: center;
-  padding: 1rem 0;
-  background: #2c3e50;
-  color: #ecf0f1;
-  margin-top: 2rem;
-  width: 100%;
-}
-
-footer a {
-  margin: 0 0.5rem;
-  color: #ecf0f1;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
+  margin: 0;
+  padd
