@@ -1,30 +1,26 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll(".navbar a");
   const sections = document.querySelectorAll(".section-content");
 
   links.forEach(link => {
-    link.addEventListener("click", function (e) {
+    link.addEventListener("click", e => {
       e.preventDefault();
 
-      // Remove 'active' class from all links
+      // Remove active class from all nav links
       links.forEach(l => l.classList.remove("active"));
-      this.classList.add("active");
+      link.classList.add("active");
 
-      // Get the target section ID
-      const targetId = this.getAttribute("href").substring(1);
-      const targetSection = document.getElementById(targetId);
+      // Get target section id
+      const targetId = link.getAttribute("href").substring(1);
 
-      // Hide all sections with fade-out effect
+      // Fade out all sections except target
       sections.forEach(section => {
-        if(section !== targetSection) {
+        if (section.id === targetId) {
+          section.classList.add("active");
+        } else {
           section.classList.remove("active");
         }
       });
-
-      // Delay to trigger fade transition for showing the target section
-      setTimeout(() => {
-        targetSection.classList.add("active");
-      }, 50);
     });
   });
 });
