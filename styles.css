@@ -9,7 +9,6 @@ body {
   line-height: 1.6;
   background: #f9f9f9;
   color: #333;
-
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -52,17 +51,16 @@ a:hover {
 .content {
   flex: 1 0 auto;
   max-width: 900px;
+  height: 650px; /* fixed height for all sections */
   margin: 2rem auto;
   padding: 2rem 2rem 3rem;
-  background: white; /* changed from saffron to white */
+  background: white;
   border-radius: 6px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   color: #222;
-
-  min-height: 600px; /* consistent height */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  overflow: hidden;
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -70,11 +68,9 @@ a:hover {
 /* Sections */
 .section-content {
   display: none;
+  flex: 1 1 auto;
+  overflow-y: auto;
   animation: fadeIn 0.5s ease-in-out;
-  margin: 0;
-  padding: 0;
-  flex-grow: 1;
-  overflow: auto;
 }
 
 .section-content.active {
@@ -85,8 +81,8 @@ a:hover {
 .hero {
   text-align: center;
   padding: 2rem 1rem;
-  background: #fdd9a0; /* very light saffron */
-  color: #333;
+  background: #f4a261; /* light saffron */
+  color: white;
   border-radius: 6px 6px 0 0;
   font-size: 1.5rem;
   font-weight: 600;
@@ -108,7 +104,7 @@ th, td {
 }
 
 th {
-  background: #e07a34;
+  background: #e07a34; /* darker saffron */
   color: white;
 }
 
@@ -146,6 +142,6 @@ footer a {
 
 /* Animations */
 @keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
