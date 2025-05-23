@@ -106,6 +106,37 @@ iframe {
   margin-bottom: 2rem;
 }
 
+/* Make the whole page a flex container in column direction */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+  margin: 0; /* reset margin */
+}
+
+/* Make main content expand to fill available space */
+main.content {
+  flex: 1 0 auto; /* grow, don’t shrink, auto basis */
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Footer stays at bottom */
+footer {
+  flex-shrink: 0; /* don’t shrink */
+  text-align: center;
+  padding: 1rem 0;
+  background: #2c3e50;
+  color: #ecf0f1;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+
 /* Footer */
 footer {
   text-align: center;
