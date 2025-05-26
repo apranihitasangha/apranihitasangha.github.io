@@ -109,8 +109,7 @@
     </section>
   </main>
 
-  <!-- 🔐 Auth + 💳 Payment Section -->
-<section id="auth-payment-section" style="max-width: 400px; margin: 4rem auto; padding: 2rem; font-family: sans-serif; border: 1px solid #ddd; border-radius: 8px;">
+<section id="auth-payment-section" class="page-section" style="display: none; max-width: 400px; margin: 4rem auto; padding: 2rem; font-family: sans-serif; border: 1px solid #ddd; border-radius: 8px;">
   <h2 style="text-align: center;">Login / Register & Payment</h2>
   <input type="email" id="email" placeholder="Email" style="width: 100%; padding: 8px; margin-bottom: 10px;" />
   <input type="password" id="password" placeholder="Password" style="width: 100%; padding: 8px; margin-bottom: 10px;" />
@@ -124,6 +123,7 @@
     Pay $50
   </button>
 </section>
+  
 
   <!-- Firebase SDKs -->
 <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
@@ -176,6 +176,27 @@
   });
 </script>
 
+<script>
+  function showSectionByHash() {
+    const hash = window.location.hash;
+    const section = document.getElementById("auth-payment-section");
+
+    if (hash === "#auth-payment-section") {
+      section.style.display = "block";
+      section.scrollIntoView({ behavior: "smooth" });
+    } else {
+      section.style.display = "none";
+    }
+  }
+
+  // On initial page load
+  window.addEventListener("load", showSectionByHash);
+
+  // On hash change (e.g., when clicking a nav link)
+  window.addEventListener("hashchange", showSectionByHash);
+</script>
+
+  
 
   <footer>
     <p>&copy; 2025 Apranihita Sangha. All rights reserved.</p>
