@@ -109,7 +109,7 @@
     </section>
   </main>
 
-<section id="auth-payment-section" class="page-section" style="display: none; max-width: 400px; margin: 4rem auto; padding: 2rem; font-family: sans-serif; border: 1px solid #ddd; border-radius: 8px;">
+<section id="auth-payment-section" style="display: none; max-width: 400px; margin: 4rem auto; padding: 2rem; font-family: sans-serif; border: 1px solid #ddd; border-radius: 8px;">
   <h2 style="text-align: center;">Login / Register & Payment</h2>
   <input type="email" id="email" placeholder="Email" style="width: 100%; padding: 8px; margin-bottom: 10px;" />
   <input type="password" id="password" placeholder="Password" style="width: 100%; padding: 8px; margin-bottom: 10px;" />
@@ -123,6 +123,7 @@
     Pay $50
   </button>
 </section>
+
   
 
   <!-- Firebase SDKs -->
@@ -177,11 +178,11 @@
 </script>
 
 <script>
-  function showSectionByHash() {
-    const hash = window.location.hash;
+  function showAuthPaymentSection() {
     const section = document.getElementById("auth-payment-section");
+    const currentHash = window.location.hash;
 
-    if (hash === "#auth-payment-section") {
+    if (currentHash === "#auth-payment-section") {
       section.style.display = "block";
       section.scrollIntoView({ behavior: "smooth" });
     } else {
@@ -189,12 +190,13 @@
     }
   }
 
-  // On initial page load
-  window.addEventListener("load", showSectionByHash);
+  // Run when page loads
+  window.addEventListener("DOMContentLoaded", showAuthPaymentSection);
 
-  // On hash change (e.g., when clicking a nav link)
-  window.addEventListener("hashchange", showSectionByHash);
+  // Run when user clicks a link that changes the hash
+  window.addEventListener("hashchange", showAuthPaymentSection);
 </script>
+
 
   
 
