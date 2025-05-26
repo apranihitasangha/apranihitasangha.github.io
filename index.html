@@ -109,7 +109,7 @@
     </section>
   </main>
 
-<section id="auth-payment-section" style="display: none; max-width: 400px; margin: 4rem auto; padding: 2rem; font-family: sans-serif; border: 1px solid #ddd; border-radius: 8px;">
+<!-- <section id="auth-payment-section" style="display: none; max-width: 400px; margin: 4rem auto; padding: 2rem; font-family: sans-serif; border: 1px solid #ddd; border-radius: 8px;">
   <h2 style="text-align: center;">Login / Register & Payment</h2>
   <input type="email" id="email" placeholder="Email" style="width: 100%; padding: 8px; margin-bottom: 10px;" />
   <input type="password" id="password" placeholder="Password" style="width: 100%; padding: 8px; margin-bottom: 10px;" />
@@ -122,9 +122,30 @@
   <button id="checkout-button" style="width: 100%; padding: 10px; background-color: #28a745; color: white; border: none; border-radius: 5px;">
     Pay $50
   </button>
+</section> -->
+
+  <!-- 🔐 Payment Section -->
+<section id="auth-payment-section" style="padding: 4rem 2rem; background-color: #f9f9f9;">
+  <div style="max-width: 500px; margin: 0 auto; border: 1px solid #ddd; border-radius: 8px; padding: 2rem; background: #fff;">
+    <h2 style="text-align: center;">Login / Register & Payment</h2>
+
+    <input type="email" id="email" placeholder="Email" style="width: 100%; padding: 8px; margin-bottom: 10px;" />
+    <input type="password" id="password" placeholder="Password" style="width: 100%; padding: 8px; margin-bottom: 10px;" />
+
+    <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+      <button onclick="signUp()">Sign Up</button>
+      <button onclick="logIn()">Log In</button>
+    </div>
+
+    <p id="auth-status" style="font-size: 0.9em; color: green;"></p>
+    <hr />
+
+    <button id="checkout-button" style="width: 100%; padding: 10px; background-color: #28a745; color: white; border: none; border-radius: 5px;">
+      Pay $50
+    </button>
+  </div>
 </section>
 
-  
 
   <!-- Firebase SDKs -->
 <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
@@ -175,30 +196,7 @@
     // ✅ Replace with your Stripe checkout link
     window.location.href = "https://buy.stripe.com/test_YOUR_CHECKOUT_LINK";
   });
-</script>
-
-<script>
-  function showAuthPaymentSection() {
-    const section = document.getElementById("auth-payment-section");
-    const currentHash = window.location.hash;
-
-    if (currentHash === "#auth-payment-section") {
-      section.style.display = "block";
-      section.scrollIntoView({ behavior: "smooth" });
-    } else {
-      section.style.display = "none";
-    }
-  }
-
-  // Run when page loads
-  window.addEventListener("DOMContentLoaded", showAuthPaymentSection);
-
-  // Run when user clicks a link that changes the hash
-  window.addEventListener("hashchange", showAuthPaymentSection);
-</script>
-
-
-  
+</script>  
 
   <footer>
     <p>&copy; 2025 Apranihita Sangha. All rights reserved.</p>
