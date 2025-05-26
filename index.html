@@ -12,6 +12,7 @@
       <a href="#home" data-section="home" class="nav-link active">Home</a>
       <a href="#about" data-section="about" class="nav-link">About Us</a>
       <a href="#services" data-section="services" class="nav-link">Services</a>
+      <a href="#register" data-section="register" class="nav-link">Register</a>
       <a href="#schedule" data-section="schedule" class="nav-link">Schedule</a>
       <a href="#media" data-section="media" class="nav-link">Media</a>
       <a href="#gallery" data-section="gallery" class="nav-link">Gallery</a>
@@ -55,7 +56,7 @@
         </p>
       <!-- truncated for brevity -->
     </section>
-
+    
     <section id="services" class="section-content">
       <h2>Learning</h2>
       <ul>
@@ -77,29 +78,8 @@
       </table>
     </section>
 
-    <section id="media" class="section-content">
-      <h2>Retreat Highlights</h2>
-      <h3>Photo from Last Retreat</h3>
-      <img src="media/retreat-group.jpg" alt="Meditators at retreat" />
-      <h3>Introduction to Silent Meditation</h3>
-      <iframe
-        width="100%"
-        height="315"
-        src="https://www.youtube.com/embed/9fDmZ68d68A"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-    </section>
-
-    <section id="gallery" class="section-content">
-      <h2>Gallery</h2>
-      <div class="gallery"><!-- placeholder --></div>
-    </section>
-
-    <!-- Firebase + Stripe Integrated Section -->
-<section id="auth-payment" style="max-width: 400px; margin: auto; padding: 2rem; font-family: sans-serif;">
+      <!-- Firebase + Stripe Integrated Section -->
+  <section id="register" style="max-width: 400px; margin: auto; padding: 2rem; font-family: sans-serif;">
   <h2>User Registration</h2>
   <input type="email" id="email" placeholder="Email" /><br />
   <input type="password" id="password" placeholder="Password" /><br />
@@ -168,6 +148,27 @@
     .catch(err => alert("Payment Error: " + err.message));
   });
 </script>
+
+    <section id="media" class="section-content">
+      <h2>Retreat Highlights</h2>
+      <h3>Photo from Last Retreat</h3>
+      <img src="media/retreat-group.jpg" alt="Meditators at retreat" />
+      <h3>Introduction to Silent Meditation</h3>
+      <iframe
+        width="100%"
+        height="315"
+        src="https://www.youtube.com/embed/9fDmZ68d68A"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </section>
+
+    <section id="gallery" class="section-content">
+      <h2>Gallery</h2>
+      <div class="gallery"><!-- placeholder --></div>
+    </section>
 
 
     <section id="contact" class="section-content">
