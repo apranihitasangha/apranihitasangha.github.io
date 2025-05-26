@@ -98,6 +98,78 @@
       <div class="gallery"><!-- placeholder --></div>
     </section>
 
+    <!-- Firebase + Stripe Integrated Section -->
+<section id="auth-payment" style="max-width: 400px; margin: auto; padding: 2rem; font-family: sans-serif;">
+  <h2>User Registration</h2>
+  <input type="email" id="email" placeholder="Email" /><br />
+  <input type="password" id="password" placeholder="Password" /><br />
+  <button onclick="signUp()">Sign Up</button>
+  <button onclick="logIn()">Log In</button>
+  <p id="auth-status"></p>
+
+  <hr />
+
+  <h2>Proceed to Payment</h2>
+  <button id="checkout-button">Pay $50</button>
+</section>
+
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js"></script>
+
+<!-- Stripe SDK -->
+<script src="https://js.stripe.com/v3/"></script>
+
+<script>
+  // 1. Initialize Firebase
+  const firebaseConfig = {
+    apiKey: "YOUR_FIREBASE_API_KEY",
+    authDomain: "your-app.firebaseapp.com",
+    projectId: "your-app-id",
+    // Add the rest from your Firebase project settings
+  };
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+
+  // 2. Sign Up Function
+  function signUp() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    auth.createUserWithEmailAndPassword(email, password)
+      .then(user => {
+        document.getElementById("auth-status").innerText = "Signed up!";
+      })
+      .catch(err => {
+        document.getElementById("auth-status").innerText = err.message;
+      });
+  }
+
+  // 3. Log In Function
+  function logIn() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    auth.signInWithEmailAndPassword(email, password)
+      .then(user => {
+        document.getElementById("auth-status").innerText = "Logged in!";
+      })
+      .catch(err => {
+        document.getElementById("auth-status").innerText = err.message;
+      });
+  }
+
+  // 4. Stripe Payment Button Logic
+  const stripe = Stripe("YOUR_STRIPE_PUBLIC_KEY"); // Replace with your Stripe public key
+  document.getElementById("checkout-button").addEventListener("click", () => {
+    fetch("/create-checkout-session", {
+      method: "POST",
+    })
+    .then(res => res.json())
+    .then(data => stripe.redirectToCheckout({ sessionId: data.id }))
+    .catch(err => alert("Payment Error: " + err.message));
+  });
+</script>
+
+
     <section id="contact" class="section-content">
       <h2>Contact Us</h2>
       <p><strong>Address:</strong> Gokarna, India / Newcastle, Australia</p>
